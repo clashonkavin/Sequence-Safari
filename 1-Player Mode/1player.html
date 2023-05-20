@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍🐍</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <dialog id="init_dialog">
+        <input type="text" name="name" id="name" placeholder="Enter Name">
+        <input type="number" name="bsize" id="bsize_input" placeholder="Board size">
+        <div id="c1">
+            <button type="submit" id="play">Play</button>
+            <button id="loadsavedGame" onclick="playSaved()">Play Saved Game</button>
+        </div>
+    </dialog>
+    <dialog id="leaderboard">
+        
+    </dialog>
+    <dialog id="nosavedgame_dialog">
+        <p>no saved game</p>
+        <button class="retry" onclick="reset()">Retry</button>
+        <button class="home" onclick="location.href='../index.html'">Home</button>
+    </dialog>
+    <div class="cont">
+        <div class="col1">
+            <span id="hearts"></span>
+            <div id="scorehigh">
+                <span id="score">Score: 0</span>
+                <div id="highScore"></div>
+            </div>
+            <div id="controls">
+                <button id='pause' onclick="pausee()" style="background-image: url(Pics/pause.png);"></button>
+                <button id='reset' onclick="reset()" style="background-image: url(Pics/reset.png);"></button>
+                <button id='volume' onclick="toggleSound()" style="background-image: url(Pics/volum.png);"></button>
+            </div>
+        </div>
+        <div class="col2">
+            <div id="gbox"></div>
+            <dic class="box">
+                <p id="pname"></p>
+                <p id="bsize"></p>
+            </dic> 
+        </div>
+        <div class="col3">
+            <p id="timer"></p>
+            <div id="move">
+                <div>
+                    <button id="up" style="background-image: url(Pics/up.png);"></button>
+                </div>
+                <div>
+                    <button id="left" style="background-image: url(Pics/left.png);"></button>
+                    <button></button>
+                    <button id="right"style="background-image: url(Pics/right.png);"></button>
+                </div>
+                <div>
+                    <button id="down" style="background-image: url(Pics/down.png);"></button> 
+                </div>
+            </div>
+            <div id="target"></div>
+        </div>       
+    </div>
+    <dialog id="pause_dialog">
+        <button id="resume" onclick="pausee()">Resume</button>
+        <div id="c1">
+            <button class="home" onclick="reset()">Home</button>
+            <button id="SaveGame" onclick="savetheGame()">Save Page</button>
+        </div>
+    </dialog>
+    <dialog id="gameover_dialog">
+        <p>Game Over</p>
+        <button class="home" onclick="location.href='../index.html'">Home</button>
+        <button class="retry" onclick="reset()">Retry</button>
+    </dialog>
+       <script src="script.js"></script>
+</body>
+</html>
