@@ -5,73 +5,138 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
-#c1{
-    display: flex;
-    margin: auto;
+
+#c1>button{
+    width: 100%;
 }
 
 #resume{
-    border: 2px solid black;
+    filter: invert(0%);
+    width: 100%;
+    height: max-content;
+    margin-bottom: 25px;
+    font-size: larger;
+    background-color:rgb(241, 241, 234);
+    padding: 5px 0px;
+    border-radius: 5px;
 }
-#home{
-    border: 2px solid black;
+
+.home{
+    filter: invert(0%);
+    height: max-content;
+    margin-bottom: 25px;
+    width: 100%;
+    font-size: larger;
+    background-color: rgb(0, 190, 0);
+    padding: 5px 0px;
+    border-radius: 5px;
 }
+
+#ns{
+    color: White;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#go{
+    color: White;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.retry{
+    filter: invert(0%);
+    height: max-content;
+    margin-bottom: 25px;
+    width: 100%;
+    font-size: larger;
+    background-color: rgb(226, 85, 85);
+    padding: 5px 0px;
+    border-radius: 5px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 #SaveGame{
-    border: 2px solid black;
+    filter: invert(0%);
+    height: max-content;
+    width: max-content;
+    font-size: larger;
+    background-color:yellow;
+    padding: 5px 0px;
+    border-radius: 5px;
 }
 #loadsavedGame{
-    border: 2px solid black;
+    filter: invert(0%);
+    height: max-content;
+    width: max-content;
+    font-size: larger;
+    background-color:yellow;
+    padding: 5px 0px;
+    border-radius: 5px;
 }
-#Play{
-    border: 2px solid black;
+#play{
+    filter: invert(0%);
+    height: max-content;
+    margin-bottom: 5px;
+    font-size: larger;
+    background-color: rgb(0, 190, 0);
+    padding: 5px 0px;
+    border-radius: 5px;
+}
+
+input{
+    text-decoration: none;
 }
 
 #pause_dialog{
-    margin: auto;
-    background-position-y: top;
-    background-position-x: center;
-    border-radius: 10px;
-    background-image: url(Pics/pause_dialog.png);
-    width: 250px;
-    height: 350px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color:  #2196f3;
-
-}
-#init_dialog{
+    padding: 50px 50px;
     margin: auto;
     border-radius: 10px;
-    background-color:  #2196f3;
+    background-color:  #203451;
     height: max-content;
     position: absolute;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+#name{
+    padding: 10px;
+}
+#bsize_input{
+    padding: 10px;
+}
+#init_dialog{
+    padding: 50px 50px;
+    margin: auto;
+    border-radius: 10px;
+    background-color:  #203451;
+    height: max-content;
+    position: absolute;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
 }
 
 #nosavedgame_dialog{
+    padding: 50px 50px;
     margin: auto;
-    background-position-y: top;
-    background-position-x: center;
     border-radius: 10px;
-    background-image: url(Pics/pause_dialog.png);
-    width: 250px;
-    height: 350px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color:  #2196f3;
-
+    background-color:  #203451;
+    height: max-content;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
 
 #gameover_dialog{
+    padding: 50px 50px;
     margin: auto;
-    background-position-y: top;
-    background-position-x: center;
     border-radius: 10px;
-    background-image: url(Pics/pause_dialog.png);
-    width: 250px;
-    height: 350px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color:  #2196f3;
+    background-color:  #203451;
+    height: max-content;
+    position: absolute;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 
 }
 
