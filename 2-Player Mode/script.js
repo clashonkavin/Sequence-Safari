@@ -382,7 +382,7 @@ function ruleBreak1(){
         if (lifes1==0){
             if (!mute){GameOverS.play()}
             document.getElementById('gameover_dialog').showModal()
-            document.getElementById('result').innerHTML = 'GameOver '+pname2+' Won!'
+            document.getElementById('result').innerHTML = pname2+' Won!'
             window.cancelAnimationFrame(animate1)
             window.cancelAnimationFrame(animate2)
             document.removeEventListener('keydown',changeDirection1)
@@ -399,7 +399,7 @@ function ruleBreak2(){
     if (lifes2==0){
         if (!mute){GameOverS.play()}
         document.getElementById('gameover_dialog').showModal()
-        document.getElementById('result').innerHTML = 'GameOver '+pname1+' Won!'
+        document.getElementById('result').innerHTML = pname1+' Won!'
         window.cancelAnimationFrame(animate1)
         window.cancelAnimationFrame(animate2)
         document.removeEventListener('keydown',changeDirection1)
