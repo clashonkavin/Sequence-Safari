@@ -6,12 +6,17 @@
 }
 
 body{
-    background : url(Pics/background.jpg);
+    background : url(Pics/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+#controls > button{
+    filter: invert(100%);
+}
+
 .title{
+    color: white;
     font-weight: 600;
     font-size: 4vmin;
 }
@@ -75,7 +80,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* min-height: 100vh;   */
+    min-height: 100vh;  
 }
 
 span{
@@ -92,7 +97,7 @@ span{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(255, 226, 108);
+    background-color: rgb(223, 223, 223);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #gbox2{
@@ -104,7 +109,7 @@ span{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(255, 226, 108);
+    background-color: rgb(223, 223, 223);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -113,11 +118,11 @@ span{
 }
 
 .even{
-    background-color: rgb(255 237 162);
+    background-color: rgb(223, 223, 223);
 }
 
 .odd{
-    background-color: rgb(239 214 50);
+    background-color: rgb(187, 187, 187);
 }
 
 .head{
@@ -188,17 +193,13 @@ span{
     width: 100%;
 }
 #gameover_dialog{
+    padding: 50px 50px;
     margin: auto;
-    background-position-y: top;
-    background-position-x: center;
     border-radius: 10px;
-    background-image: url(Pics/pause_dialog.png);
-    width: 250px;
-    height: 350px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color:  #2196f3;
-
+    background-color:  #203451;
+    height: max-content;
+    position: absolute;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -210,26 +211,22 @@ span{
 
 
 .unEaten1{
-    padding: 1%;
     display: flex;
+    padding: 0px 5px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 1px;
     font-size: 5vmin;
     font-weight: 600;
 }
 #init_dialog{
+    padding: 50px 50px;
     margin: auto;
-    background-position-y: top;
-    background-position-x: center;
     border-radius: 10px;
-    background-image: url(Pics/pause_dialog.png);
-    width: 250px;
-    height: 350px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color:  #2196f3;
+    background-color:  #203451;
+    height: max-content;
+    position: absolute;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
 
 .box{
@@ -237,51 +234,117 @@ span{
 }
 
 #pause_dialog{
+    padding: 50px 50px;
     margin: auto;
-    background-position-y: top;
-    background-position-x: center;
     border-radius: 10px;
-    background-image: url(Pics/pause_dialog.png);
-    width: 250px;
-    height: 350px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color:  #2196f3;
+    background-color:  #203451;
+    height: max-content;
+    position: absolute;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.init{
+    display: flex;
+    flex-direction: column;
+}
+
+#play{
+    filter: invert(0%);
+    height: max-content;
+    margin-bottom: 5px;
+    font-size: larger;
+    background-color: rgb(0, 190, 0);
+    padding: 5px 0px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.home{
+    filter: invert(0%);
+    height: max-content;
+    margin-bottom: 25px;
+    width: 100%;
+    font-size: larger;
+    background-color: rgb(0, 190, 0);
+    padding: 5px 0px;
+    border-radius: 5px;
+}
+
+.retry{
+    filter: invert(0%);
+    height: max-content;
+    margin-bottom: 25px;
+    width: 100%;
+    font-size: larger;
+    background-color: rgb(226, 85, 85);
+    padding: 5px 0px;
+    border-radius: 5px;
+}
+
+#resume{
+    filter: invert(0%);
+    width: 100%;
+    height: max-content;
+    margin-bottom: 25px;
+    font-size: larger;
+    background-color:rgb(241, 241, 234);
+    padding: 5px 0px;
+    border-radius: 5px;
+}
+
+#go{
+    color: White;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#result{
+    color: White;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 50px;
 
 }
 
+#name1,#name2,#bsize_input{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#bsize_input{
+    margin-bottom: 40px;
+}
+
 .Eaten1{
-    padding: 1%;
-    margin: 1px;
     display: flex;
+    padding: 0px 5px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgb(49, 154, 49);
+    background-color: rgb(34, 103, 160);
     color: rgb(255, 47, 47);
     font-size: 5vmin;
     font-weight: 600;
 }
 
 .unEaten2{
-    padding: 1%;
     display: flex;
+    padding: 0px 5px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 1px;
     font-size: 5vmin;
     font-weight: 600;
 }
 
 .Eaten2{
-    padding: 1%;
-    margin: 1px;
     display: flex;
+    padding: 0px 5px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgb(49, 154, 49);
+    background-color: rgb(34, 103, 160);
     color: rgb(255, 47, 47);
     font-size: 5vmin;
     font-weight: 600;
@@ -324,61 +387,42 @@ span{
     background-color: black;
 }
 
+#score1,#score2{
+    color: white;
+}
 
-/* Media Query  */
- /* @media (max-width:930px){
-    .cont{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+.box{
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-around;
+}
+
+#pname1,#pname2{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 500;
+}
+#default{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#alternate{
+    display: none;
+}
+
+@media (max-width:1080px){
+    #default{
+        display: none;
     }
-    .col1{
-        flex-direction: column-reverse;
-    }
-    .col2{
-        margin-top: 5vmin;
-        margin-bottom: 10vmin;
-    }
-    .col3{
-        display: flex;
-        flex-direction: row;
-    }
-    #move{
-        width: 100%;
-    }
-    #timer{
-        width: 100%;
-    }
-    #target{
-        width: 100%;
-    }
-    #score{
-        margin-bottom: 3vmin;
-    }
-    #gbox{
-        height: 90vmin;
-        width: 90vmin
-    }
-    #hearts{
-        margin-top: 1vmin;
-        margin-bottom: 0vmin;
-    }
-    #highScore{
-        margin-bottom: 2vmin;
-    }
-    #controls{
-        display:flex;
-        justify-content: space-around;
-        width:50%;
-        margin-top:1vmin;
-        margin-bottom:4vmin;   
-    }
-    #scorehigh{
-        display:flex;
-        justify-content: space-around;
-        width:80%;
-        margin-bottom: 1vmin;
+    #alternate{
+        display: block;
+        color: white;
+        font-size: larger;
+        font-weight: 600;
     }
 }
- */
