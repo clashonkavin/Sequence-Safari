@@ -3,6 +3,7 @@
     padding: 0;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 #c1{
     display: flex;
@@ -40,15 +41,10 @@
 }
 #init_dialog{
     margin: auto;
-    background-position-y: top;
-    background-position-x: center;
     border-radius: 10px;
-    background-image: url(Pics/pause_dialog.png);
-    width: 250px;
-    height: 350px;
-    background-size: 100%;
-    background-repeat: no-repeat;
     background-color:  #2196f3;
+    height: max-content;
+    position: absolute;
 }
 
 #nosavedgame_dialog{
@@ -80,7 +76,7 @@
 }
 
 .cont{
-    background : url(Pics/background.jpg);
+    background : url(Pics/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -93,6 +89,7 @@
     width:75%;    
 }
 #highScore{
+    color: white;
     margin-bottom: 8vmin;
     font-weight: 700;
 }
@@ -100,6 +97,7 @@
 button{
     cursor: pointer;
     background-color: transparent;
+    filter: invert(100%);
     width: 5vmin;
     height: 5vmin;
     background-size: 100%;
@@ -126,7 +124,13 @@ button{
 }
 
 .box{
+    margin-top: 10px;
     display: flex;
+    justify-content:space-around;
+    width: 100%;
+    color: white;
+    font-size: larger;
+    font-weight: 600;
 }
 
 .col3{
@@ -139,12 +143,14 @@ button{
     flex-direction: column;
 }
 #timer{
+    color: white;
     margin-bottom: 5vmin;
     font-size: 5vmin;
     font-weight: 600;
 }
 
 #move{
+    size: 200%;
     margin-bottom: 5vmin;
 }
 
@@ -153,6 +159,7 @@ button{
 }
 
 #score{
+    color: white;
     margin-bottom: 8vmin;
 }
 
@@ -182,7 +189,7 @@ span{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(255, 226, 108);
+    background-color: rgb(233, 233, 233);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -191,11 +198,11 @@ span{
 }
 
 .even{
-    background-color: rgb(255 237 162);
+    background-color: rgb(223, 223, 223);
 }
 
 .odd{
-    background-color: rgb(239 214 50);
+    background-color: rgb(187, 187, 187);
 }
 
 .head{
@@ -272,6 +279,7 @@ span{
 .unEaten{
     padding: 1%;
     display: flex;
+    color: white;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -287,7 +295,7 @@ span{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgb(49, 154, 49);
+    background-color: rgb(34, 103, 160);
     color: rgb(255, 47, 47);
     font-size: 5vmin;
     font-weight: 600;
@@ -354,6 +362,8 @@ span{
         width: 100%;
     }
     #timer{
+
+
         width: 100%;
     }
     #target{
@@ -383,8 +393,9 @@ span{
     #scorehigh{
         display:flex;
         justify-content: space-around;
-        width:80%;
+        width:100%;
         margin-bottom: 1vmin;
+        font-size: larger;
     }
 }
 
