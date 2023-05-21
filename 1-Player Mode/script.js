@@ -31,10 +31,7 @@ var lightX = 0
 var lightY = 0
 var obsV = 1
 var timerstart = false
-var leaderboard = JSON.parse(localStorage.getItem('leaderboard'))
-if (leaderboard == undefined || leaderboard == null) {
-    var leaderboard = []
-}
+
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -152,8 +149,6 @@ function timer(){
             document.getElementById('gameover_dialog').showModal()
             window.cancelAnimationFrame(animate)
             clearInterval(countDown)
-            leaderboard.push([pname,score])
-            localStorage.setItem("leaderboard",JSON.stringify(leaderboard))
             document.removeEventListener('keydown',changeDirection)
             document.removeEventListener('mousedown',changeDirection)
         }
@@ -268,13 +263,6 @@ function setBoard(){
         if(e.key=="Escape"){
             pausee()
         }
-        if(e.key=='h'){
-            for (let i=0;i<leaderboard.length;i++){
-                ele = document.createElement('div')
-                ele.innerHTML = leaderboard[i][0].toString()+leaderboard[i][1]
-                document.getElementById('leaderboard').append(ele)
-            }
-        }
     }
 
     function dispHearts(){
@@ -294,8 +282,6 @@ function setBoard(){
             document.getElementById('gameover_dialog').showModal()
             window.cancelAnimationFrame(animate)
             clearInterval(countDown)
-            leaderboard.push([pname,score])
-            localStorage.setItem("leaderboard",JSON.stringify(leaderboard))
             document.removeEventListener('keydown',changeDirection)
             document.removeEventListener('mousedown',changeDirection)
 
@@ -631,8 +617,6 @@ function playSaved() {
 
     localStorage.clear()
     localStorage.setItem("hiscore", max)
-    localStorage.setItem("leaderboard", leaderboard)
-
 }
 
 function powerups(){
@@ -686,5 +670,5 @@ window.onload = function () {
         playSaved()
         if (!mute){init.play()}
     }
-    document.getElementById("init_dialog").showModal() 
+    document.getElementById("init_dialog").showModal()
 }
