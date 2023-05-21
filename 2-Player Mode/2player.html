@@ -8,51 +8,56 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class = 'title'>Sequence Safari</div>
-        <dialog id="init_dialog">
-            <input type="text" name="name1" id="name1" placeholder="Enter Name of player1">
-            <input type="text" name="name1" id="name2" placeholder="Enter Name of player2">
-            <input type="number" name="bsize" id="bsize_input" placeholder="Board size">
-            <div id="c1">
-                <button type="submit" id="play">Play</button>
+        <div id="default">
+            <div class = 'title'>Sequence Safari</div>
+            <dialog id="init_dialog">
+                <div class="init">
+                    <input type="text" name="name1" id="name1" placeholder="Enter Name of player1">
+                    <input type="text" name="name1" id="name2" placeholder="Enter Name of player2">
+                    <input type="number" name="bsize" id="bsize_input" placeholder="Board size-recom 20 :)">
+                    <div id="c1">
+                        <button type="submit" id="play">Start</button>
+                    </div>
+                </div>
+            </dialog>
+            <div id="controls">
+                <button id='pause' onclick="pausee()" style="background-image: url(Pics/pause.png);"></button>
+                <button id='reset' onclick="window.location.reload()" style="background-image: url(Pics/reset.png);"></button>
+                <button id='volume' onclick="toggleSound()" style="background-image: url(Pics/volum.png);"></button>
             </div>
+        <div class="cont" style="width: 100%;justify-content: space-around;">
+            <div class="col1">
+                <span id="hearts1"></span>
+                <span id="score1">Score: 0</span>
+                <div id="gbox1"></div> 
+                <div class="box">
+                    <p id="pname1"></p>
+                    <div id="target1"></div>
+                </div>
+            </div>
+            <div class="col2">
+                <span id="hearts2"></span>
+                <span id="score2">Score: 0</span>
+                <div id="gbox2"></div> 
+                <div class="box">
+                    <p id="pname2"></p>
+                    <div id="target2"></div>
+                </div>
+            </div>
+        </div>
+        <dialog id="pause_dialog">
+            <button id="resume" onclick="pausee()">Resume</button>
+            <button class="retry" onclick="window.location.reload()">Retry</button>
+            <button class="home" onclick="location.href='../index.html'">Home</button>
         </dialog>
-        <div id="controls">
-            <button id='pause' onclick="pausee()" style="background-image: url(Pics/pause.png);"></button>
-            <button id='reset' onclick="window.location.reload()" style="background-image: url(Pics/reset.png);"></button>
-            <button id='volume' onclick="toggleSound()" style="background-image: url(Pics/volum.png);"></button>
+        <dialog id="gameover_dialog">
+            <p id="go">GAME OVER!!!</p>
+            <p id="result"></p>
+            <button class="home" onclick="location.href='../index.html'">Home</button>
+            <button class="retry" onclick="window.location.reload()">Retry</button>
+        </dialog>
         </div>
-        <div class="cont">
-        <div class="col1">
-            <span id="hearts1"></span>
-            <span id="score1">Score: 0</span>
-            <div id="gbox1"></div> 
-            <div class="box">
-                <p id="pname1"></p>
-                <div id="target1"></div>
-            </div>
-        </div>
-        <div class="col2">
-            <span id="hearts2"></span>
-            <span id="score2">Score: 0</span>
-            <div id="gbox2"></div> 
-            <div class="box">
-                <p id="pname2"></p>
-                <div id="target2"></div>
-            </div>
-        </div>
-    </div>
-    <dialog id="pause_dialog">
-        <button id="resume" onclick="pausee()">Resume</button>
-        <button class="retry" onclick="window.location.reload()">Retry</button>
-        <button class="home" onclick="location.href='../index.html'">Home</button>
-    </dialog>
-    <dialog id="gameover_dialog">
-        <p>Game Over</p>
-        <p id="result"></p>
-        <button class="home" onclick="location.href='../index.html'">Home</button>
-        <button class="retry" onclick="window.location.reload()">Retry</button>
-    </dialog>
+        <div id="alternate">This Screen Size is not supported for MULTIPLAYER MODE!!!</div>
        <script src="script.js"></script>
 </body>
 </html>
