@@ -11,7 +11,7 @@
     <dialog id="init_dialog">
         <div class="init">
             <input type="text" name="name" id="name" placeholder="Enter Name"><br>
-            <input type="number" name="bsize" id="bsize_input" placeholder="Board size"><br>
+            <input type="number" name="bsize" id="bsize_input" placeholder="Board size-recom 20 :)"><br><br><br>
             <div id="c1">
                 <button type="submit" id="play">Play</button>
                 <button id="loadsavedGame" onclick="playSaved()">Play Saved Game</button>
@@ -22,7 +22,7 @@
         
     </dialog>
     <dialog id="nosavedgame_dialog">
-        <p>no saved game</p>
+        <p id="ns">NO SAVED GAME!!</p>
         <button class="retry" onclick="reset()">Retry</button>
         <button class="home" onclick="location.href='../index.html'">Home</button>
     </dialog>
@@ -67,14 +67,14 @@
     <dialog id="pause_dialog">
         <button id="resume" onclick="pausee()">Resume</button>
         <div id="c1">
-            <button class="home" onclick="reset()">Home</button>
+            <button class="home" onclick="location.href='../index.html'">Home</button>
             <button id="SaveGame" onclick="savetheGame()">Save Page</button>
         </div>
     </dialog>
     <dialog id="gameover_dialog">
-        <p>Game Over</p>
-        <button class="home" onclick="location.href='../index.html'">Home</button>
+        <p id="go">GAME OVER!!!</p>
         <button class="retry" onclick="reset()">Retry</button>
+        <button class="home" onclick="location.href='../index.html'">Home</button>
     </dialog>
        <script src="script.js"></script>
 </body>
